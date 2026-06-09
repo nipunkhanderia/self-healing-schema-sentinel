@@ -82,7 +82,7 @@ sentinel heal airline tests/test_airline.py
 
 | Command | Description |
 |---|---|
-| `sentinel register <name> <path>` | Register a JSON Schema or raw JSON sample as a new schema version |
+| `sentinel register <name> <path>` | .github/workflows/Register a JSON Schema or raw JSON sample as a new schema version |
 | `sentinel validate <name> <payload>` | Validate a JSON payload against the latest registered schema |
 | `sentinel diff <name>` | Show field-level drift between the two most recent schema versions |
 | `sentinel heal <name> <tests_path>` | Full pipeline: diff → LLM test gen → write output |
@@ -119,7 +119,7 @@ sentinel heal airline tests/test_airline.py
 Add schema drift detection to your CI pipeline:
 
 ```yaml
-# .github/workflows/schema-sentinel.yml
+# schema-sentinel.yml
 name: Schema Sentinel
 
 on:

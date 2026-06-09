@@ -1,0 +1,31 @@
+name: Schema Sentinel
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  sentinel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install schema-sentinel
+        run: pip install -e .
+
+      - name: Run tests with Allure
+        run: pytest tests/ -v --alluredir=allure-results
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results/
