@@ -1,0 +1,11 @@
+{
+  "flight_number": "BA123",
+  "departure_airport": "LHR",
+  "arrival_airport": "JFK",
+  "departure_time": "2025-06-15T08:30:00Z",
+  "passenger_name": "Nipun Sharma",
+  "seat_class": "business",
+  "seat_number": "12A",
+  "price": "1249.99",
+  "currency": "GBP"
+}

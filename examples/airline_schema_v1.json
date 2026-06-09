@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AirlineBooking",
+  "type": "object",
+  "required": ["flight_number", "departure_airport", "arrival_airport", "passenger_name", "seat_class", "price"],
+  "properties": {
+    "flight_number": { "type": "string", "description": "IATA flight code e.g. BA123" },
+    "departure_airport": { "type": "string", "description": "IATA airport code" },
+    "arrival_airport": { "type": "string", "description": "IATA airport code" },
+    "departure_time": { "type": "string", "format": "date-time" },
+    "passenger_name": { "type": "string" },
+    "seat_class": { "type": "string", "enum": ["economy", "business", "first"] },
+    "seat_number": { "type": "string" },
+    "price": { "type": "string", "description": "Price as string e.g. '249.99'" },
+    "currency": { "type": "string", "default": "GBP" }
+  }
+}

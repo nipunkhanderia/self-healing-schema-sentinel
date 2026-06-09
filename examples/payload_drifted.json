@@ -1,0 +1,12 @@
+{
+  "flight_number": "BA456",
+  "departure_airport": "LHR",
+  "arrival_airport": "DXB",
+  "departure_time": "2025-07-01T14:00:00Z",
+  "passenger_name": "Nipun Sharma",
+  "seat_number": "22C",
+  "price": 899.99,
+  "currency": "GBP",
+  "baggage_allowance": 23,
+  "loyalty_number": "BA9876543"
+}
