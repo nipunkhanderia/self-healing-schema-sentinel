@@ -54,7 +54,8 @@ def test_healer_calls_groq_backend(sample_drift_report):
         mock_response = MagicMock()
         mock_response.choices[0].message.content = "def test_baggage_allowance(): assert True"
 
-        with patch("sentinel.healer.Groq") as MockGroq:
+        # with patch("sentinel.healer.Groq") as MockGroq:
+        with patch("groq.Groq") as MockGroq:
             MockGroq.return_value.chat.completions.create.return_value = mock_response
             healer = TestHealer()
             result = healer.generate_tests(sample_drift_report, "", {})
