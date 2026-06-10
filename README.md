@@ -51,6 +51,9 @@ sentinel heal airline tests/test_airline.py
 
 ## Architecture — 5-Phase Pipeline
 
+The pipeline consists of five stages — Registry, Validator, Differ, Healer, and Writer — 
+followed by a Notifier for reporting.
+
 ![Pipeline Diagram](diagram.png)
 
 
