@@ -53,21 +53,6 @@ sentinel heal airline tests/test_airline.py
 
 ![Pipeline Diagram](diagram.png)
 
-```
-┌──────────────┐    ┌─────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│   Registry   │───▶│  Validator  │───▶│    Differ    │───▶│    Healer    │───▶│    Writer    │
-│              │    │             │    │              │    │              │    │              │
-│ Store/version│    │ Validate    │    │ Detect drift │    │ LLM rewrites │    │ Local file   │
-│ JSON schemas │    │ live payload│    │ field changes│    │ pytest tests │    │ or GitHub PR │
-└──────────────┘    └─────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
-                                                                                      │
-                                                                               ┌──────▼──────┐
-                                                                               │  Notifier   │
-                                                                               │             │
-                                                                               │ Allure +    │
-                                                                               │ PR comment  │
-                                                                               └─────────────┘
-```
 
 | Module | Responsibility |
 |---|---|
