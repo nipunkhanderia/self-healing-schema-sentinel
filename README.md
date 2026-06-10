@@ -51,6 +51,8 @@ sentinel heal airline tests/test_airline.py
 
 ## Architecture — 5-Phase Pipeline
 
+![Pipeline Diagram](diagram.png)
+
 ```
 ┌──────────────┐    ┌─────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
 │   Registry   │───▶│  Validator  │───▶│    Differ    │───▶│    Healer    │───▶│    Writer    │
